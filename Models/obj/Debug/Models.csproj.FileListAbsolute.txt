@@ -1,0 +1,12 @@
+E:\MVC\Examples\WebApplication1\Models\bin\Debug\Models.dll.config
+E:\MVC\Examples\WebApplication1\Models\bin\Debug\Models.dll
+E:\MVC\Examples\WebApplication1\Models\bin\Debug\Models.pdb
+E:\MVC\Examples\WebApplication1\Models\bin\Debug\EntityFramework.dll
+E:\MVC\Examples\WebApplication1\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\MVC\Examples\WebApplication1\Models\bin\Debug\EntityFramework.xml
+E:\MVC\Examples\WebApplication1\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\MVC\Examples\WebApplication1\Models\obj\Debug\Models.csprojAssemblyReference.cache
+E:\MVC\Examples\WebApplication1\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\MVC\Examples\WebApplication1\Models\obj\Debug\Models.csproj.CopyComplete
+E:\MVC\Examples\WebApplication1\Models\obj\Debug\Models.dll
+E:\MVC\Examples\WebApplication1\Models\obj\Debug\Models.pdb
