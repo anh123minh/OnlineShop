@@ -27,7 +27,7 @@ namespace OnlineShop.Areas.Admin.Controllers
             if (result && ModelState.IsValid)
             {
                 SessionHelper.SetSession(new UserSession(){UserName = model.UserName});
-                return RedirectToAction("Index", "HomeAdmin");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
