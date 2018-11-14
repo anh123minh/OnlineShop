@@ -32,20 +32,30 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         // POST: Admin/Category/Create
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Category collection)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
+                    var model = new CategoryModel();
+                    int res = model.Create(collection.Name, collection.Alias, collection.ParentID, collection.Order,
+                        collection.Status);
+                    if(res > 0)
                     // TODO: Add insert logic here
-                    //Insert data(viet sau)
+                    //Insert data
                     return RedirectToAction("Index");
+                    else
+                    {
+                        ModelState.AddModelError("", "Them moi khong thanh cong!");
+                    }
                 }
                 return View(collection);
             }
-            catch
+            catch (Exception ex)
             {
+                var mess = ex;
                 return View();
             }
         }
