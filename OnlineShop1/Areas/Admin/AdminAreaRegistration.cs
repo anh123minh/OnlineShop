@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Web.Configuration;
+using System.Web.Mvc;
+using System.Xml.XPath;
 
 namespace OnlineShop1.Areas.Admin
 {
@@ -17,7 +19,8 @@ namespace OnlineShop1.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                namespaces: new string[] { "OnlineShop1.Areas.Admin.Controllers" }
             );
         }
     }

@@ -24,6 +24,11 @@ namespace Models1.Dao
             return entity.ID;
         }
 
+        public User GetById(string userName)
+        {
+            return db.Users.FirstOrDefault(x => x.UserName == userName);
+        }
+
         public bool Login(string userName, string password)
         {
             var result = db.Users.Count(x => x.UserName == userName && x.Password == password);

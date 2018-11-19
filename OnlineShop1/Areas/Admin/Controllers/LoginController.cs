@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Models1.Dao;
 using OnlineShop1.Areas.Admin.Models;
+using OnlineShop1.Common;
 
 namespace OnlineShop1.Areas.Admin.Controllers
 {
@@ -24,7 +25,12 @@ namespace OnlineShop1.Areas.Admin.Controllers
                 var result = dao.Login(model.UserName, model.Password);
                 if (result)
                 {
-
+                    var user = dao.GetById(model.UserName);
+                    var userSession = new UserLogin();
+                    userSession.UserName = user.UserName;
+                    userSession.UserID = user.ID;
+                    Session.Add(CommonConstants.USER_SESSION, userSession);
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
